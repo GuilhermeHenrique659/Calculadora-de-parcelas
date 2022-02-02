@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora de juros compostos</title>
+  <link rel="stylesheet" href="table.css" />
+  <script src="Calculadora.js"></script>
+</head>
+
+<body>
+
+  <h1>Calculadora</h1>
+  <fieldset>
+    <table id="customers">
+      <form name="Calculadora" method="POST" action="">
+        <tr>
+          <th><label for="Emprestimo">Valor inicial</label></th>
+          <th><input type="text" name="Emprestimo" id="Emprestimo" onKeyUp="mascaraMoeda(this, event)"></th>
+        </tr>
+        <br>
+        <tr>
+          <th><label for="entrada">Entrada</label></th>
+          <th><input type="text" name="entrada" id="entrada" value="0" onKeyUp="mascaraMoeda(this, event)"></th>
+        </tr>
+        <br>
+        <tr>
+          <th><label for="Meses">Periodo</label></th>
+          <th><input type="text" name="Meses" id="Meses"></th>
+        </tr>
+        <br>
+        <tr>
+          <th><label for="Tax">Taxa de Juros</label></th>
+          <th><input type="text" name="Tax" id="Tax" onKeyUp="Juros(this, event)"></th>
+        </tr>
+        <br>
+        <tr>
+
+        </tr>
+        <br>
+        <tr>
+          <th><label for="Res">Resultado</label></th>
+          <th><input type="text" name="Res" id="Res"></th>
+        </tr>
+        <br>
+        <tr>
+          <th><input type="button" value="Calcular" class="button" onclick="Calcular(document.Calculadora.oper.value)">
+          </th>
+          <label for="oper"></label>
+          <th><select name="oper" id="oper" class="oper">
+              <option value="mensal">Mensal</option>
+              <option value="anual">Anual</option>
+            </select></th>
+        </tr>
+      </form>
+    </table>
+  </fieldset>
+</body>
+
+</html>
